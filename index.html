@@ -1,344 +1,94 @@
-
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <audio id="musica-quarta" src="musicas/cancao.mp3" preload="auto" style="display:none;"></audio>
-  <meta charset="UTF-8">
-  <title>Nosso Amor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .botao-abraco {
-      display: block;
-      margin: 32px auto 0 auto;
-      background: linear-gradient(90deg, #ffb347, #ff69b4, #66b3ff);
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 38px;
-      font-size: 1.25em;
-      font-weight: bold;
-      box-shadow: 0 2px 12px #ffb347cc;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .botao-abraco:hover {
-      transform: scale(1.08);
-      box-shadow: 0 4px 24px #ff69b4cc;
-      background: linear-gradient(90deg, #66b3ff, #ffb347, #ff69b4);
-    }
-    .abraco-virtual {
-      display: none;
-      margin: 32px auto 0 auto;
-      max-width: 500px;
-      background: #23232b;
-      color: #fff;
-      border-radius: 22px;
-      padding: 32px 28px 38px 28px;
-      font-size: 1.5em;
-      text-align: center;
-      box-shadow: 0 2px 24px #ffb34755;
-      position: relative;
-      animation: abracoSurge 1s cubic-bezier(.68,-0.55,.27,1.55);
-    }
-    @keyframes abracoSurge {
-      0% { opacity: 0; transform: scale(0.7); }
-      60% { opacity: 1; transform: scale(1.08); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-    .emoji-abraco {
-      font-size: 2.5em;
-      display: block;
-      margin-bottom: 18px;
-    }
-    .tabs {
-      background: #23232b;
-      border-radius: 18px;
-      padding: 10px 0 6px 0;
-      margin: 32px auto 18px auto;
-      max-width: 700px;
-      box-shadow: 0 2px 16px #111a;
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-    .tab-btn {
-      background: #23232b;
-      color: #fff;
-      border: none;
-      border-radius: 12px 12px 0 0;
-      padding: 10px 28px;
-      font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      margin-bottom: -2px;
-    }
-    .tab-btn.active, .tab-btn:hover {
-      background: #353545;
-      color: #ffb347;
-      box-shadow: 0 2px 12px #ffb34733;
-    }
-    .poema-quarta {
-      font-size: 2.1em;
-      line-height: 1.3;
-      color: #fff;
-      text-align: center;
-      max-width: 900px;
-      margin: 60px auto 30px auto;
-      font-family: 'Georgia', 'Times New Roman', serif;
-      letter-spacing: 1.2px;
-      text-shadow: 0 2px 16px #ff69b4cc, 0 1px 0 #222;
-      min-height: 320px;
-      transition: font-size 0.3s;
-    }
-    .assinatura-poetica {
-      font-size: 1.3em;
-      color: #ffb347;
-      margin-top: 32px;
-      font-family: 'Dancing Script', cursive, 'Comic Sans MS', cursive;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-    .botao-amor {
-      display: block;
-      margin: 24px auto 16px auto;
-      background: linear-gradient(90deg, #ff69b4, #ffb347, #66b3ff);
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      padding: 12px 36px;
-      font-size: 1.2em;
-      font-weight: bold;
-      box-shadow: 0 2px 12px #ff69b4cc;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .botao-amor:hover {
-      transform: scale(1.07);
-      box-shadow: 0 4px 24px #ffb347cc;
-      background: linear-gradient(90deg, #ffb347, #ff69b4, #66b3ff);
-    }
-    .mensagem-amor {
-      background: #222c;
-      color: #fff;
-      border-radius: 18px;
-      padding: 18px 28px;
-      margin: 18px auto 0 auto;
-      max-width: 420px;
-      font-size: 1.1em;
-      text-align: center;
-      box-shadow: 0 2px 12px #ff69b4cc;
-      animation: surge 0.8s ease-in-out;
-    }
-    @keyframes surge {
-      0% { opacity: 0; transform: scale(0.8); }
-      60% { opacity: 1; transform: scale(1.08); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-    body {
-      background: #111 !important;
-      color: #fff !important;
-    }
-    .arcoiris-borda {
-      pointer-events: none;
-      position: fixed;
-      z-index: 99999;
-    }
-    .arcoiris-top {
-      top: 0; left: 0; width: 100vw; height: 16px;
-      background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 0 2px 16px #ffb6c1;
-    }
-    .arcoiris-bottom {
-      bottom: 0; left: 0; width: 100vw; height: 16px;
-      background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 0 -2px 16px #ffb6c1;
-    }
-    .arcoiris-left {
-      top: 0; left: 0; width: 16px; height: 100vh;
-      background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 2px 0 16px #ffb6c1;
-    }
-    .arcoiris-right {
-      top: 0; right: 0; width: 16px; height: 100vh;
-      background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: -2px 0 16px #ffb6c1;
-    }
-    @keyframes arcoirisAnim {
-      0% { filter: brightness(1) saturate(1); }
-      100% { filter: brightness(1.2) saturate(1.5); }
-    }
-    .frase-amor {
-      position: fixed;
-      left: 50%;
-      top: 40px;
-      transform: translateX(-50%);
-      font-size: 1.3em;
-      color: #ff1493;
-      background: #222c;
-      border-radius: 18px;
-      padding: 8px 22px;
-      box-shadow: 0 2px 12px #ffd6e6;
-      z-index: 99998;
-      animation: fraseAnim 1.8s ease-in-out;
-    }
-    @keyframes fraseAnim {
-      0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
-      60% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-      100% { opacity: 1; transform: translateX(-50%) scale(1); }
-    }
-  </style>
- <button id="btn-video" style="position:fixed;top:15px;right:15px;z-index:1000;background:#fff0f5;border:2px solid #ff69b4;color:#c71585;border-radius:50px;padding:8px 18px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px #ffd6e6;">⏸️ Pausar vídeo</button>
-  <div class="arcoiris-borda arcoiris-top"></div>
-  <div class="arcoiris-borda arcoiris-bottom"></div>
-  <div class="arcoiris-borda arcoiris-left"></div>
-  <div class="arcoiris-borda arcoiris-right"></div>
-  <div id="frase-amor" class="frase-amor" style="display:none;"></div>
-  <div class="tabs">
-  <button class="tab-btn" onclick="showTab(0)">1 mês de namoro</button>
-  <button class="tab-btn" onclick="showTab(1)">Aniversário da Gaby 🎂</button>
-  <button class="tab-btn active" onclick="showTab(2)">3 meses de namoro 💖</button>
-  <button class="tab-btn" onclick="showTab(3)">Surpresa especial ✨</button>
-  </div>
+<body>
 
-  <div class="conteudo tab-content" id="mensagem1">
-    <h1 class="titulo-brilhante">🌸 Um mês que mudou tudo 🌸</h1>
-    <p>Meu amor,</p>
-    <p>Hoje completamos um mês desde que o destino decidiu que nossas histórias precisavam se cruzar. Um mês. Parece pouco — mas na verdade, é tudo. Porque nesse tempo, você transformou o meu mundo com a leveza de um gesto, com a doçura de uma risada e com o amor mais intenso que meu coração já experimentou.</p>
-    <p>Lembro da primeira vez que te vi… e foi como se o tempo parasse pra dar espaço ao instante certo. Teus olhos carregavam promessas que nem sabíamos ainda, mas que já estavam escritas nas entrelinhas do nosso encontro. Foi ali que meu coração começou a entender que amar você seria inevitável.</p>
-    <p>A primeira vez que dormimos juntos — ah, aquilo não foi só repouso. Foi abrigo. Foi encontrar no teu corpo o lar que faltava no meu. E, mesmo em meio a gargantas ruins, não faltou cuidado, não faltou amor, não faltou o milagre da conexão que nos cura até em silêncio.</p>
-    <p>Teu riso na praia, debaixo das estrelas, ainda mora aqui. A areia nos pés, o céu por testemunha, e nós dois, inteiros em cada olhar trocado. Como se o universo sussurrasse: “Aproveitem. Vocês são raros.”</p>
-    <p>E até colocar iscas pras abelhas virou ritual nosso. O simples virou poesia porque estava contigo. E naquele momento em que coloquei a aliança no teu dedo… eu não apenas fiz uma promessa. Eu declarei ao mundo que era você. Sempre foi você.</p>
-    <p>Mas confesso: a primeira vez que você foi embora, foi como se uma parte de mim tivesse sido levada junto. Vi o amor da minha vida partir… e meu coração apertou como nunca. Só não desmoronou porque sabia: você voltaria. Porque nosso amor não sabe ser ausente — só intenso.</p>
-    <p>Te amo demais. Com uma certeza que se espalha nos meus dias como luz. Te amo por tudo que é, por tudo que fomos, e por tudo que ainda seremos. Que esse seja o primeiro mês de todos os meses que virão. Te celebro. Te espero. Te vivo.</p>
-    <p class="assinatura">Com o coração cheio do teu nome, — Filipe 💗</p>
-    <h1 class="titulo-brilhante">💗 Um mês da nossa eternidade 💗 </h1>
-    <p style="margin-top: 20px; font-weight: bold; color: #c71585; font-size: 1.1em;">
-      💍 Nosso voo nupcial de amor decola em <span id="contador"></span> dias... <br>
-      E cada dia é uma contagem de saudade, sonho e certeza: 02 de dezembro 💍
-    </p>
-  </div>
+    <!-- ========== BARRA DE NAVEGAÇÃO DAS ABAS ========== -->
+    <nav class="tabs">
+        <button class="tab-btn active" data-tab="tab1">Carta 1</button>
+        <button class="tab-btn" data-tab="tab2">Carta 2</button>
+        <button class="tab-btn" data-tab="tab3">Carta 3</button>
+        <button class="tab-btn" data-tab="tab4">Carta 4</button>
+        <!-- Botão da nova aba -->
+        <button class="tab-btn" data-tab="tab5">Nova Mensagem</button>
+    </nav>
 
-  <div class="conteudo tab-content" id="mensagem2">
+    <!-- ========== CONTAINER DAS ABAS ========== -->
+    <main class="tabs-container">
 
-    <h1 class="titulo-brilhante">🎂 O dia em que o mundo ganhou você 🎂</h1>
-    <p>Meu amor,</p>
-    <p>Ontem, o universo celebrou o dia em que você chegou ao mundo — e eu tive o privilégio de estar ao seu lado, vivendo cada instante, cada sorriso, cada abraço. Foi mágico, foi intenso, foi tudo o que eu sonhei e mais um pouco. Ver você sorrir, sentir tua alegria, poder te abraçar e te lembrar o quanto é amada... nada se compara a isso.</p>
-    <p>Estar presente no teu aniversário foi como tocar o céu com as mãos. Cada detalhe, cada olhar trocado, cada palavra dita ou silenciada, tudo ficou gravado em mim. Você é poesia viva, é luz que ilumina meus dias, é o presente mais bonito que a vida me deu.</p>
-    <p>Te ver celebrar a vida me faz querer celebrar a tua existência todos os dias. Porque você transforma tudo ao redor, faz o tempo desacelerar, faz o amor florescer. Ontem, mais do que nunca, eu soube: quero estar ao teu lado em todos os aniversários, em todos os dias, em todos os sonhos.</p>
-    <p>Obrigado por me permitir fazer parte da tua história, por me deixar ser teu porto seguro, tua companhia, teu amor. Que cada novo ciclo seja ainda mais doce, mais leve, mais nosso. Que eu possa te fazer feliz, te cuidar, te amar — hoje e sempre.</p>
+        <!-- ========== ABA 1 ========== -->
+        <section id="tab1" class="tab-content active">
+            <div class="carta">
+                <h2>Minha princesa linda</h2>
+                <p>
+                    Eu escrevi essa carta para te lembrar o quanto você ilumina a minha vida.
+                    Cada momento ao seu lado é único, especial e inesquecível.
+                    Que você sempre sinta o amor enorme que tenho por você.
+                </p>
+            </div>
+        </section>
 
-    <p>Você é minha inspiração, minha alegria, meu futuro. Te amo com tudo o que sou, e tudo o que serei é teu.</p>
-    <p class="assinatura">Com todo meu amor, — Filipe 💗</p>
-    <h1 class="titulo-brilhante">Parabéns para o amor da minha vida! 🎉💗</h1>
+        <!-- ========== ABA 2 ========== -->
+        <section id="tab2" class="tab-content">
+            <div class="carta">
+                <h2>Carta 2</h2>
+                <p>
+                    Minha florzinha, você tem um jeito tão doce de transformar tudo em lugar seguro.
+                    Se eu pudesse pedir uma coisa ao universo, seria continuar sendo seu por toda a vida.
+                </p>
+            </div>
+        </section>
 
-  </div>
+        <!-- ========== ABA 3 ========== -->
+        <section id="tab3" class="tab-content">
+            <div class="carta">
+                <h2>Carta 3</h2>
+                <p>
+                    Entre mil caminhos, sempre escolheria você. 
+                    Sua risada, seu abraço, seu olhar… tudo em você me acalma.
+                </p>
+            </div>
+        </section>
 
-  <div class="conteudo tab-content active" id="mensagem3">
-  <video id="video-amor" controls autoplay loop style="width:100%;max-width:400px;display:block;margin:0 auto 20px auto;border-radius:18px;box-shadow:0 2px 16px #ffb6c1;">
-      <source src="fotos/VID-20250824-WA0037.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-    <button id="btn-amor" class="botao-amor">💖 Preciso de você</button>
-    <div id="mensagem-amor" class="mensagem-amor" style="display:none;">
-      Amor, cada despedida é um pedacinho de mim sentindo falta de você. Meu jeito implicante é só saudade disfarçada de carinho. Você é incrível, amável, e tudo o que eu mais quero é estar ao seu lado em todos os momentos. Te amo mais do que consigo explicar!
-    </div>
-    <h1 class="titulo-brilhante">💖 3 meses de nós dois 💖</h1>
-    <p>Meu amor,</p>
-    <p>
-      Hoje celebramos 3 meses de uma história que só faz crescer. Cada despedida dói, porque meu coração só quer estar com você o tempo todo. Sinto sua falta até quando você ainda está por perto, porque o meu amor é tão grande que nunca é suficiente te ter só um pouco.
-    </p>
-    <p>
-      Você é incrível, amável, doce, forte, e até meu jeito implicante é só porque te amo demais. Quero dividir cada momento do meu dia com você, rir das nossas bobeiras, sonhar junto, construir memórias e nunca deixar de te admirar.
-    </p>
-    <p>
-      Obrigado por ser minha paz, minha alegria, minha saudade boa. Que venham muitos meses, anos e uma vida inteira ao seu lado. Você é meu presente, minha escolha, meu amor para sempre.
-    </p>
-    <p class="assinatura">Com todo o meu amor, saudade e carinho, — Filipe 💗</p>
-  </div>
+        <!-- ========== ABA 4 (AJUSTADA) ========== -->
+        <section id="tab4" class="tab-content">
+            <div class="container-quarta">
 
-  <div class="conteudo tab-content" id="mensagem4" style="display:none;">
-    <button id="btn-abraco" class="botao-abraco">🤗 Receber um abraço virtual</button>
-    <div id="abraco-virtual" class="abraco-virtual">
-      <span class="emoji-abraco">🤗💗</span>
-      Sinta-se abraçada bem forte agora! Feche os olhos, imagine meus braços ao seu redor e todo o meu amor te envolvendo. Você nunca está sozinha, sempre tem meu carinho pertinho de você.
-    </div>
-    <div id="poema-quarta" class="poema-quarta"></div>
-    <div id="assinatura-poetica" class="assinatura-poetica">Com todo o meu amor, Filipe 💗</div>
-  </div>
-  <div class="carrossel">
-    <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
-    <p class="legenda">“Cada imagem é um verso do poema que escrevemos juntos.”</p>
-  </div>
-<div class="conteudo tab-content" id="mensagem5" style="display:none;">
-  <h1 class="titulo-brilhante">💍 A nossa entrada começa aqui 💍</h1>
+                <h2 class="titulo-poema">Carta Especial</h2>
 
-  <p>Meu amor,</p>
+                <p class="linha-poema" style="--i:1;">Eu te amo em cada detalhe.</p>
+                <p class="linha-poema" style="--i:2;">No seu sorriso eu encontro paz.</p>
+                <p class="linha-poema" style="--i:3;">No seu abraço, encontro meu lar.</p>
+                <p class="linha-poema" style="--i:4;">E no seu olhar, encontro tudo que quero viver.</p>
 
-  <p>
-    Estamos a poucos dias de viver um dos momentos mais importantes da nossa vida:  
-    a entrada para o nosso casamento. Só de pensar nisso, meu coração já sorri —  
-    porque é com você que eu sempre sonhei dividir tudo.
-  </p>
+                <p class="assinatura-poetica">— Com todo o meu amor</p>
 
-  <p>
-    Cada passo que estamos dando agora tem o brilho da nossa história.  
-    E quando assinarmos nossos nomes lado a lado, não será apenas um documento…  
-    será a confirmação do que meu coração já sabia desde o início:  
-    você é meu destino, minha certeza, minha casa.
-  </p>
+            </div>
+        </section>
 
-  <p>
-    Mal posso esperar para caminhar contigo nessa nova fase,  
-    construir nossa vida, dividir nossos dias,  
-    e amar você em todos eles — até o fim de todas as coisas.
-  </p>
+        <!-- ========== NOVA ABA 5 — CONTEÚDO BASE ========== -->
+        <!-- depois você me diz o conteúdo final, por enquanto deixei preparada -->
+        <section id="tab5" class="tab-content">
+            <div class="carta">
+                <h2>Nossa Nova Mensagem</h2>
+                <p>
+                    Esta aba foi preparada para receber a nova mensagem especial que você deseja adicionar.
+                    Assim que você me disser o texto ou o estilo desejado, eu finalizo o conteúdo.
+                </p>
+            </div>
+        </section>
 
-  <p class="assinatura">Com amor eterno, — Filipe 💗</p>
-</div>
+    </main>
 
-  <div class="conteudo tab-content" id="mensagem5" style="display:none;">
-  <h1 class="titulo-brilhante">💍 A nossa entrada começa aqui 💍</h1>
+    <!-- ========== EFEITOS VISUAIS (CAMADA INDEPENDENTE) ========== -->
+    <div id="effects-layer"></div>
 
-  <p>Meu amor,</p>
-
-  <p>
-    Estamos a poucos dias de viver um dos momentos mais importantes da nossa vida:  
-    a entrada para o nosso casamento. Só de pensar nisso, meu coração já sorri —  
-    porque é com você que eu sempre sonhei dividir tudo.
-  </p>
-
-  <p>
-    Cada passo que estamos dando agora tem o brilho da nossa história.  
-    E quando assinarmos nossos nomes lado a lado, não será apenas um documento…  
-    será a confirmação do que meu coração já sabia desde o início:  
-    você é meu destino, minha certeza, minha casa.
-  </p>
-
-  <p>
-    Mal posso esperar para caminhar contigo nessa nova fase,  
-    construir nossa vida, dividir nossos dias,  
-    e amar você em todos eles — até o fim de todas as coisas.
-  </p>
-
-  <p class="assinatura">Com amor eterno, — Filipe 💗</p>
-  </div>
-  <script src="script.js"></script>
-  <script>
-    // Garante que a aba 3 esteja ativa ao abrir a página
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof showTab === 'function') {
-        showTab(2);
-      }
-    });
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
