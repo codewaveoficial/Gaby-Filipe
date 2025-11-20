@@ -3,91 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Amor</title>
+    <title>Nossas Mensagens</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ========== BARRA DE NAVEGAÇÃO DAS ABAS ========== -->
-    <nav class="tabs">
-        <button class="tab-btn active" data-tab="tab1">Carta 1</button>
-        <button class="tab-btn" data-tab="tab2">Carta 2</button>
-        <button class="tab-btn" data-tab="tab3">Carta 3</button>
-        <button class="tab-btn" data-tab="tab4">Carta 4</button>
-        <!-- Botão da nova aba -->
-        <button class="tab-btn" data-tab="tab5">Nova Mensagem</button>
-    </nav>
+    <div class="container">
 
-    <!-- ========== CONTAINER DAS ABAS ========== -->
-    <main class="tabs-container">
+        <h1 class="titulo">Nossas Mensagens</h1>
 
-        <!-- ========== ABA 1 ========== -->
-        <section id="tab1" class="tab-content active">
-            <div class="carta">
-                <h2>Minha princesa linda</h2>
-                <p>
-                    Eu escrevi essa carta para te lembrar o quanto você ilumina a minha vida.
-                    Cada momento ao seu lado é único, especial e inesquecível.
-                    Que você sempre sinta o amor enorme que tenho por você.
-                </p>
-            </div>
-        </section>
+        <!-- Navegação -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab1">Amor</button>
+            <button class="tab-btn" data-tab="tab2">Gratidão</button>
+            <button class="tab-btn" data-tab="tab3">Caminho a Dois</button>
+            <button class="tab-btn" data-tab="tab4">Promessas</button>
+            <button class="tab-btn" data-tab="tab5">Nosso Casamento</button>
+        </div>
 
-        <!-- ========== ABA 2 ========== -->
-        <section id="tab2" class="tab-content">
-            <div class="carta">
-                <h2>Carta 2</h2>
-                <p>
-                    Minha florzinha, você tem um jeito tão doce de transformar tudo em lugar seguro.
-                    Se eu pudesse pedir uma coisa ao universo, seria continuar sendo seu por toda a vida.
-                </p>
-            </div>
-        </section>
+        <!-- Conteúdos -->
+        <div class="tab-content active" id="tab1">
+            <p>
+                Desde que você chegou, tudo ficou mais leve, mais bonito e mais cheio de sentido. 
+                É no seu abraço que encontro o meu lar, e no seu sorriso, o meu lugar favorito no mundo. 
+                Você é a melhor parte dos meus dias, e o amor que construímos é a maior certeza que carrego no coração.
+            </p>
+        </div>
 
-        <!-- ========== ABA 3 ========== -->
-        <section id="tab3" class="tab-content">
-            <div class="carta">
-                <h2>Carta 3</h2>
-                <p>
-                    Entre mil caminhos, sempre escolheria você. 
-                    Sua risada, seu abraço, seu olhar… tudo em você me acalma.
-                </p>
-            </div>
-        </section>
+        <div class="tab-content" id="tab2">
+            <p>
+                Agradeço todos os dias por ter você ao meu lado. Por cada detalhe, cada cuidado, 
+                cada palavra dita no momento certo. Nossa história é feita de gestos simples que 
+                se tornam gigantes, e de promessas silenciosas que seguimos cumprindo sem nem perceber: 
+                estar um para o outro, sempre.
+            </p>
+        </div>
 
-        <!-- ========== ABA 4 (AJUSTADA) ========== -->
-        <section id="tab4" class="tab-content">
-            <div class="container-quarta">
+        <div class="tab-content" id="tab3">
+            <p>
+                Construir a vida ao seu lado tem sido a aventura mais bonita que já vivi. 
+                E o melhor é saber que ainda temos tantos sonhos para realizar juntos. 
+                Cada plano, cada conquista, cada passo… tudo fica maior e melhor quando é dividido com você. 
+                Somos equipe, somos parceria, somos nós — e isso basta.
+            </p>
+        </div>
 
-                <h2 class="titulo-poema">Carta Especial</h2>
+        <div class="tab-content" id="tab4">
+            <p>
+                Prometo continuar cuidando de você, respeitando o que você sente e valorizando cada instante que temos. 
+                Prometo ser colo nos dias difíceis, risada nos dias leves e mão estendida em todos os caminhos. 
+                Prometo manter viva essa chama boa, que cresce a cada gesto de amor nosso.
+            </p>
+        </div>
 
-                <p class="linha-poema" style="--i:1;">Eu te amo em cada detalhe.</p>
-                <p class="linha-poema" style="--i:2;">No seu sorriso eu encontro paz.</p>
-                <p class="linha-poema" style="--i:3;">No seu abraço, encontro meu lar.</p>
-                <p class="linha-poema" style="--i:4;">E no seu olhar, encontro tudo que quero viver.</p>
+        <div class="tab-content" id="tab5">
+            <p>
+                Está chegando o momento que sempre sonhamos… daqui a um mês, daremos início ao nosso casamento — 
+                e eu mal consigo descrever a emoção que isso me traz.<br><br>
+                Saber que estamos prestes a transformar o nosso amor em um compromisso para a vida inteira é algo 
+                que toca profundamente o meu coração.<br><br>
+                Cada passo que demos até aqui nos trouxe segurança, maturidade e a certeza de que somos feitos um 
+                para o outro. E agora, estamos prestes a iniciar uma nova fase, cheia de sonhos, conquistas e a nossa 
+                própria história construída com carinho, respeito e parceria.<br><br>
+                Mal posso esperar para olhar nos seus olhos e sentir que o ‘para sempre’ finalmente começa.
+            </p>
+        </div>
 
-                <p class="assinatura-poetica">— Com todo o meu amor</p>
-
-            </div>
-        </section>
-
-        <!-- ========== NOVA ABA 5 — CONTEÚDO BASE ========== -->
-        <!-- depois você me diz o conteúdo final, por enquanto deixei preparada -->
-        <section id="tab5" class="tab-content">
-            <div class="carta">
-                <h2>Nossa Nova Mensagem</h2>
-                <p>
-                    Esta aba foi preparada para receber a nova mensagem especial que você deseja adicionar.
-                    Assim que você me disser o texto ou o estilo desejado, eu finalizo o conteúdo.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ========== EFEITOS VISUAIS (CAMADA INDEPENDENTE) ========== -->
-    <div id="effects-layer"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
