@@ -1,139 +1,222 @@
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Nosso Amor</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Meses do Nosso Amor 💕</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .arcoiris-borda {
-      pointer-events: none;
-      position: fixed;
-      z-index: 99999;
-    }
-    .arcoiris-top {
-      top: 0; left: 0; width: 100vw; height: 16px;
-      background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 0 2px 16px #ffb6c1;
-    }
-    .arcoiris-bottom {
-      bottom: 0; left: 0; width: 100vw; height: 16px;
-      background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 0 -2px 16px #ffb6c1;
-    }
-    .arcoiris-left {
-      top: 0; left: 0; width: 16px; height: 100vh;
-      background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: 2px 0 16px #ffb6c1;
-    }
-    .arcoiris-right {
-      top: 0; right: 0; width: 16px; height: 100vh;
-      background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3);
-      animation: arcoirisAnim 4s linear infinite alternate;
-      box-shadow: -2px 0 16px #ffb6c1;
-    }
-    @keyframes arcoirisAnim {
-      0% { filter: brightness(1) saturate(1); }
-      100% { filter: brightness(1.2) saturate(1.5); }
-    }
-    .frase-amor {
-      position: fixed;
-      left: 50%;
-      top: 40px;
-      transform: translateX(-50%);
-      font-size: 1.3em;
-      color: #ff1493;
-      background: #fff0f5cc;
-      border-radius: 18px;
-      padding: 8px 22px;
-      box-shadow: 0 2px 12px #ffd6e6;
-      z-index: 99998;
-      animation: fraseAnim 1.8s ease-in-out;
-    }
-    @keyframes fraseAnim {
-      0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
-      60% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-      100% { opacity: 1; transform: translateX(-50%) scale(1); }
-    }
+    .arcoiris-borda { pointer-events: none; position: fixed; z-index: 99999; }
+    .arcoiris-top { top: 0; left: 0; width: 100vw; height: 16px; background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 0 2px 16px #ffb6c1; }
+    .arcoiris-bottom { bottom: 0; left: 0; width: 100vw; height: 16px; background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 0 -2px 16px #ffb6c1; }
+    .arcoiris-left { top: 0; left: 0; width: 16px; height: 100vh; background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 2px 0 16px #ffb6c1; }
+    .arcoiris-right { top: 0; right: 0; width: 16px; height: 100vh; background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: -2px 0 16px #ffb6c1; }
+    @keyframes arcoirisAnim { 0% { filter: brightness(1) saturate(1); } 100% { filter: brightness(1.2) saturate(1.5); } }
+    .timer-badge { position: fixed; top: 25px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ff69b4, #ff1493); color: #fff; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4); z-index: 99997; animation: batidaCoracao 1.2s ease-in-out infinite; }
+    @keyframes batidaCoracao { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.05); } }
+    .numero-cinco { font-size: 5em; margin: 20px 0; animation: pulsarNumero 2s ease-in-out infinite; }
+    @keyframes pulsarNumero { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    .subtitulo-especial { font-size: 1.4em; color: #c71585; font-style: italic; font-weight: bold; margin: 15px 0 30px 0; text-shadow: 0 2px 4px rgba(255, 105, 180, 0.3); }
+    .timeline-especial { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 40px 0; }
+    .marco-tempo { background: linear-gradient(135deg, #fff5f8 0%, #ffe4e1 100%); padding: 20px 25px; border-radius: 15px; text-align: center; border: 2px solid #ff69b4; flex: 1; min-width: 140px; max-width: 160px; box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2); transition: all 0.3s ease; }
+    .marco-tempo:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3); }
+    .ponto-tempo { width: 12px; height: 12px; background: #ff1493; border-radius: 50%; margin: 0 auto 10px; box-shadow: 0 0 10px #ff1493; }
+    .marco-tempo h3 { color: #ff1493; margin: 10px 0 8px 0; font-size: 1.1em; }
+    .marco-tempo p { color: #c71585; font-size: 0.9em; margin: 0; }
+    .mensagem-cinco-meses { background: linear-gradient(120deg, rgba(255, 105, 180, 0.08), rgba(255, 182, 193, 0.08)); padding: 30px; border-radius: 20px; margin: 30px 0; border-left: 5px solid #ff1493; border-right: 5px solid #ff69b4; }
+    .mensagem-cinco-meses p { font-size: 1.1em; line-height: 1.8; color: #ff1493; margin: 15px 0; font-style: italic; }
+    .contador-destaque { font-size: 1.5em; font-weight: bold; color: #ff1493; background: #fff0f5; padding: 5px 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3); }
+    .coracao-contador { font-size: 2em; animation: flutuarCoracao 3s ease-in-out infinite; margin: 20px 0; }
+    @keyframes flutuarCoracao { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .capitulo-historia { background: linear-gradient(135deg, #fff5f8 0%, #ffe4e1 100%); padding: 25px; margin: 20px 0; border-radius: 15px; border-left: 5px solid #ff69b4; box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2); transition: all 0.3s ease; }
+    .capitulo-historia:hover { transform: translateX(5px); box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); }
+    .numero-capitulo { display: inline-block; background: #ff69b4; color: #fff; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em; margin-bottom: 10px; }
+    .capitulo-historia h3 { color: #ff1493; margin: 10px 0 15px 0; font-size: 1.4em; }
+    .capitulo-historia p { color: #c71585; line-height: 1.8; font-size: 1em; margin: 0; }
+    .flor-decorativa { font-size: 2em; text-align: right; margin-top: 10px; animation: girarFlor 4s ease-in-out infinite; }
+    @keyframes girarFlor { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(15deg); } }
+    .mensagem-final-historia { background: linear-gradient(135deg, #ff69b4, #ff1493); padding: 30px; border-radius: 15px; margin-top: 30px; box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3); }
+    .frase-poetica { color: #fff; font-size: 1.3em; font-style: italic; text-align: center; margin: 0; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+    .poesia-amor { background: linear-gradient(120deg, rgba(255, 105, 180, 0.05), rgba(255, 182, 193, 0.05)); padding: 40px 30px; border-radius: 20px; margin: 30px 0; border: 2px solid #ff69b4; box-shadow: 0 6px 20px rgba(255, 105, 180, 0.15); }
+    .verso { color: #ff1493; font-size: 1.15em; line-height: 2; margin: 10px 0; font-style: italic; text-align: center; letter-spacing: 0.5px; }
+    .verso.lista { text-align: left; padding-left: 30px; font-weight: 500; color: #c71585; }
+    .assinatura-poesia { font-weight: bold; font-size: 1.1em; color: #ff1493; margin-top: 20px !important; }
+    @media (max-width: 768px) { .timer-badge { font-size: 1em; padding: 10px 15px; } .numero-cinco { font-size: 3em; } .titulo-brilhante { font-size: 1.5em !important; } .verso { font-size: 1em; } .marco-tempo { min-width: 120px; max-width: 140px; padding: 15px; } }
   </style>
- <button id="btn-video" style="position:fixed;top:15px;right:15px;z-index:1000;background:#fff0f5;border:2px solid #ff69b4;color:#c71585;border-radius:50px;padding:8px 18px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px #ffd6e6;">⏸️ Pausar vídeo</button>
+</head>
+<body>
+  <button id="btn-video" style="position:fixed;top:15px;right:15px;z-index:1000;background:#fff0f5;border:2px solid #ff69b4;color:#c71585;border-radius:50px;padding:8px 18px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px #ffd6e6;">⏸️ Pausar vídeo</button>
   <div class="arcoiris-borda arcoiris-top"></div>
   <div class="arcoiris-borda arcoiris-bottom"></div>
   <div class="arcoiris-borda arcoiris-left"></div>
   <div class="arcoiris-borda arcoiris-right"></div>
-  <div id="frase-amor" class="frase-amor" style="display:none;"></div>
+  <div class="timer-badge">5️⃣ MESES 💕</div>
   <div class="tabs">
-    <button class="tab-btn" onclick="showTab(0)">1 mês de namoro</button>
-    <button class="tab-btn" onclick="showTab(1)">Aniversário da Gaby 🎂</button>
-    <button class="tab-btn active" onclick="showTab(2)">Para sempre com você 💖</button>
+    <button class="tab-btn" onclick="showTab(0)">5 Meses 🎉</button>
+    <button class="tab-btn" onclick="showTab(1)">Nossa História 📖</button>
+    <button class="tab-btn active" onclick="showTab(2)">Para Sempre 💖</button>
   </div>
 
   <div class="conteudo tab-content" id="mensagem1">
-    <h1 class="titulo-brilhante">🌸 Um mês que mudou tudo 🌸</h1>
-    <p>Meu amor,</p>
-    <p>Hoje completamos um mês desde que o destino decidiu que nossas histórias precisavam se cruzar. Um mês. Parece pouco — mas na verdade, é tudo. Porque nesse tempo, você transformou o meu mundo com a leveza de um gesto, com a doçura de uma risada e com o amor mais intenso que meu coração já experimentou.</p>
-    <p>Lembro da primeira vez que te vi… e foi como se o tempo parasse pra dar espaço ao instante certo. Teus olhos carregavam promessas que nem sabíamos ainda, mas que já estavam escritas nas entrelinhas do nosso encontro. Foi ali que meu coração começou a entender que amar você seria inevitável.</p>
-    <p>A primeira vez que dormimos juntos — ah, aquilo não foi só repouso. Foi abrigo. Foi encontrar no teu corpo o lar que faltava no meu. E, mesmo em meio a gargantas ruins, não faltou cuidado, não faltou amor, não faltou o milagre da conexão que nos cura até em silêncio.</p>
-    <p>Teu riso na praia, debaixo das estrelas, ainda mora aqui. A areia nos pés, o céu por testemunha, e nós dois, inteiros em cada olhar trocado. Como se o universo sussurrasse: “Aproveitem. Vocês são raros.”</p>
-    <p>E até colocar iscas pras abelhas virou ritual nosso. O simples virou poesia porque estava contigo. E naquele momento em que coloquei a aliança no teu dedo… eu não apenas fiz uma promessa. Eu declarei ao mundo que era você. Sempre foi você.</p>
-    <p>Mas confesso: a primeira vez que você foi embora, foi como se uma parte de mim tivesse sido levada junto. Vi o amor da minha vida partir… e meu coração apertou como nunca. Só não desmoronou porque sabia: você voltaria. Porque nosso amor não sabe ser ausente — só intenso.</p>
-    <p>Te amo demais. Com uma certeza que se espalha nos meus dias como luz. Te amo por tudo que é, por tudo que fomos, e por tudo que ainda seremos. Que esse seja o primeiro mês de todos os meses que virão. Te celebro. Te espero. Te vivo.</p>
-    <p class="assinatura">Com o coração cheio do teu nome, — Filipe 💗</p>
-    <h1 class="titulo-brilhante">💗 Um mês da nossa eternidade 💗 </h1>
+    <h1 class="titulo-brilhante">✨ CINCO MESES ✨</h1>
+    <div class="numero-cinco">5️⃣</div>
+    <p class="subtitulo-especial">De puro amor, carinho e saudade</p>
+    
+    <div class="timeline-especial">
+      <div class="marco-tempo">
+        <div class="ponto-tempo"></div>
+        <h3>❤️ Mês 1</h3>
+        <p>O primeiro beijo que acendeu tudo</p>
+      </div>
+      <div class="marco-tempo">
+        <div class="ponto-tempo"></div>
+        <h3>🌹 Mês 2</h3>
+        <p>Primeiros abraços eternos</p>
+      </div>
+      <div class="marco-tempo">
+        <div class="ponto-tempo"></div>
+        <h3>🎂 Mês 3</h3>
+        <p>Seu aniversário especial</p>
+      </div>
+      <div class="marco-tempo">
+        <div class="ponto-tempo"></div>
+        <h3>💍 Mês 4</h3>
+        <p>Promessas sussurradas</p>
+      </div>
+      <div class="marco-tempo">
+        <div class="ponto-tempo"></div>
+        <h3>💕 Mês 5</h3>
+        <p>Este momento sagrado</p>
+      </div>
+    </div>
+
+    <div class="mensagem-cinco-meses">
+      <p>Cinco meses são 150 dias. São 3.600 horas. São 216.000 minutos de amor crescendo como flores em primavera eterna.</p>
+      <p>Cinco meses são as noites em que você foi meu alento, e os dias em que você foi meu raio de sol.</p>
+      <p>Cinco meses são histórias pequenas que viraram lendas entre nós. Risos que ainda ecoam. Beijos que ainda queimam.</p>
+    </div>
+
+    <h2 class="titulo-brilhante" style="margin-top: 40px;">💍 Nosso Voo Nupcial 💍</h2>
     <p style="margin-top: 20px; font-weight: bold; color: #c71585; font-size: 1.1em;">
-      💍 Nosso voo nupcial de amor decola em <span id="contador"></span> dias... <br>
-      E cada dia é uma contagem de saudade, sonho e certeza: 02 de dezembro 💍
+      Decola em <span id="contador" class="contador-destaque"></span> dias <br>
+      <span style="font-size: 0.95em; color: #ff69b4;">02 de dezembro de 2025</span>
     </p>
+    <div class="coracao-contador">💕💕💕</div>
   </div>
 
   <div class="conteudo tab-content" id="mensagem2">
+    <h1 class="titulo-brilhante">📖 Nossa História em 5 Meses 📖</h1>
+    
+    <div class="capitulo-historia">
+      <div class="numero-capitulo">Capítulo I</div>
+      <h3>O Encontro do Destino</h3>
+      <p>Nada preparou meu coração para você. Quando nossos olhos se encontraram, senti algo que transcende explicação — era como se o universo tivesse estado esperando por esse exato momento. Você chegou e tudo mudou de cor, de cheiro, de sentido.</p>
+      <div class="flor-decorativa">🌹</div>
+    </div>
 
-    <h1 class="titulo-brilhante">🎂 O dia em que o mundo ganhou você 🎂</h1>
-    <p>Meu amor,</p>
-    <p>Ontem, o universo celebrou o dia em que você chegou ao mundo — e eu tive o privilégio de estar ao seu lado, vivendo cada instante, cada sorriso, cada abraço. Foi mágico, foi intenso, foi tudo o que eu sonhei e mais um pouco. Ver você sorrir, sentir tua alegria, poder te abraçar e te lembrar o quanto é amada... nada se compara a isso.</p>
-    <p>Estar presente no teu aniversário foi como tocar o céu com as mãos. Cada detalhe, cada olhar trocado, cada palavra dita ou silenciada, tudo ficou gravado em mim. Você é poesia viva, é luz que ilumina meus dias, é o presente mais bonito que a vida me deu.</p>
-    <p>Te ver celebrar a vida me faz querer celebrar a tua existência todos os dias. Porque você transforma tudo ao redor, faz o tempo desacelerar, faz o amor florescer. Ontem, mais do que nunca, eu soube: quero estar ao teu lado em todos os aniversários, em todos os dias, em todos os sonhos.</p>
-    <p>Obrigado por me permitir fazer parte da tua história, por me deixar ser teu porto seguro, tua companhia, teu amor. Que cada novo ciclo seja ainda mais doce, mais leve, mais nosso. Que eu possa te fazer feliz, te cuidar, te amar — hoje e sempre.</p>
+    <div class="capitulo-historia">
+      <div class="numero-capitulo">Capítulo II</div>
+      <h3>O Primeiro Beijo</h3>
+      <p>Seus lábios tocaram os meus e foi como se centenas de pétalas caíssem do céu. Aquele beijo sussurrou promessas que meu coração já conhecia. Foi doce, era intenso, era tudo aquilo que sempre procurei.</p>
+      <div class="flor-decorativa">💋</div>
+    </div>
 
-    <p>Você é minha inspiração, minha alegria, meu futuro. Te amo com tudo o que sou, e tudo o que serei é teu.</p>
-    <p class="assinatura">Com todo meu amor, — Filipe 💗</p>
-    <h1 class="titulo-brilhante">Parabéns para o amor da minha vida! 🎉💗</h1>
+    <div class="capitulo-historia">
+      <div class="numero-capitulo">Capítulo III</div>
+      <h3>Noites de Eternidade</h3>
+      <p>Dormirmos juntos foi descobrir um novo significado para "paz". No escuro do quarto, nos braços um do outro, senti como se todos os pedaços soltos da minha alma finalmente encontrassem seu lugar. Aquilo era música, era casa, era tudo.</p>
+      <div class="flor-decorativa">🌙</div>
+    </div>
 
+    <div class="capitulo-historia">
+      <div class="numero-capitulo">Capítulo IV</div>
+      <h3>Promessas Sussurradas</h3>
+      <p>Em cada abraço, em cada palavra carinhosa, em cada olhar que sustentamos, nós selamos promessas. Promessas de amor, de cuidado, de um futuro onde nossa história continue florescendo em cores cada vez mais intensas.</p>
+      <div class="flor-decorativa">💍</div>
+    </div>
+
+    <div class="capitulo-historia">
+      <div class="numero-capitulo">Capítulo V</div>
+      <h3>Este Momento Sagrado</h3>
+      <p>Cinco meses. Uma eternidade comprimida em tempo. Você é meu verso favorito, meu poema inacabado, minha melhor escolha. Encontrei meu para sempre no seu sorriso, meu lar nos seus abraços, meu amor na sua presença.</p>
+      <div class="flor-decorativa">💕</div>
+    </div>
+
+    <div class="mensagem-final-historia">
+      <p class="frase-poetica">"Nós não escolhemos nos amar. O amor nos escolheu. E agora, juntos, escrevemos a maior história de todas."</p>
+    </div>
   </div>
 
   <div class="conteudo tab-content active" id="mensagem3">
-<video id="video-amor" controls autoplay loop style="width:100%;max-width:400px;display:block;margin:0 auto 20px auto;border-radius:18px;box-shadow:0 2px 16px #ffb6c1;">
-  <source src="fotos/VID-20250824-WA0037.mp4" type="video/mp4">
-  Seu navegador não suporta vídeo.
-</video>
-<h1 class="titulo-brilhante">💖 Nosso amor é luz, cor e saudade 💖</h1>
-<p>Meu amor,</p>
-<p>Hoje, cada batida do meu coração é um grito de paixão, alegria e saudade por você. Sinto teu cheiro em cada vento, tua risada em cada raio de sol, teu carinho em cada detalhe do meu dia. O tempo passa, mas a vontade de te abraçar só aumenta, e a saudade vira poesia dentro de mim.</p>
-<p>Você é o colorido dos meus dias, o abraço que me acalma, o sorriso que me faz acreditar que o mundo é mais bonito quando estamos juntos. Te amo com uma força que não cabe em palavras, com uma alegria que transborda, com um carinho que nunca se apaga.</p>
-<p>Nosso amor é feito de lembranças doces, de sonhos compartilhados, de planos para um futuro cheio de luz. Sinto falta de você até quando estamos juntos, porque quero sempre mais: mais beijos, mais risos, mais momentos, mais nós.</p>
-<p>Que Deus abençoe cada passo nosso, cada saudade, cada reencontro. Que a paixão nunca se apague, que a alegria seja nossa rotina, que o carinho seja eterno. Você é minha saudade boa, meu amor sem medida, minha alegria diária.</p>
-<p class="assinatura">Com todo o meu amor, saudade e carinho, — Filipe 💗</p>
-</div>
-  <div class="carrossel">
-    <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
-    <p class="legenda">“Cada imagem é um verso do poema que escrevemos juntos.”</p>
+    <video id="video-amor" controls autoplay loop style="width:100%;max-width:500px;display:block;margin:0 auto 30px auto;border-radius:20px;box-shadow:0 8px 24px #ffb6c1;border:3px solid #ff69b4;">
+      <source src="fotos/VID-20250824-WA0037.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+    <h1 class="titulo-brilhante" style="font-size: 2.5em; margin: 30px 0;">💖 PARA SEMPRE COM VOCÊ 💖</h1>
+    
+    <div class="poesia-amor">
+      <p class="verso">Cinco meses e já é para sempre,</p>
+      <p class="verso">Porque o tempo não mede o que sentimos,</p>
+      <p class="verso">Mede apenas os instantes onde você brilha.</p>
+      <p class="verso"></p>
+      <p class="verso">Meu amor,</p>
+      <p class="verso"></p>
+      <p class="verso">Cada batida do meu coração é um grito de paixão por você.</p>
+      <p class="verso">Sinto teu cheiro em cada vento que passa,</p>
+      <p class="verso">Tua risada em cada raio de sol que ilumina meus dias,</p>
+      <p class="verso">Teu carinho em cada detalhe que me cerca.</p>
+      <p class="verso"></p>
+      <p class="verso">O tempo passa, mas a vontade de te abraçar só cresce.</p>
+      <p class="verso">A saudade vira poesia quando é por você.</p>
+      <p class="verso"></p>
+      <p class="verso">Você é o colorido que faltava nos meus dias,</p>
+      <p class="verso">O abraço que me acalma quando a tempestade chega,</p>
+      <p class="verso">O sorriso que prova que o mundo é mais bonito quando estamos juntos.</p>
+      <p class="verso"></p>
+      <p class="verso">Te amo com uma força que transcende palavras,</p>
+      <p class="verso">Com uma alegria que transborda e contagia,</p>
+      <p class="verso">Com um carinho que nasceu comigo e viverá enquanto eu respirar.</p>
+      <p class="verso"></p>
+      <p class="verso">Nosso amor é feito de:</p>
+      <p class="verso lista">✨ Lembranças que doem de tão doces</p>
+      <p class="verso lista">✨ Sonhos que planejamos juntos</p>
+      <p class="verso lista">✨ Planos para um futuro radiante</p>
+      <p class="verso lista">✨ Beijos que falam o que as palavras calam</p>
+      <p class="verso lista">✨ Abraços que curam sem ferir</p>
+      <p class="verso lista">✨ Momentos que se transformam em eternidade</p>
+      <p class="verso"></p>
+      <p class="verso">Sinto sua falta até quando estamos juntos,</p>
+      <p class="verso">Porque quero sempre mais:</p>
+      <p class="verso">Mais beijos, mais risos, mais sopros de vida ao seu lado.</p>
+      <p class="verso"></p>
+      <p class="verso">Cinco meses são apenas o começo,</p>
+      <p class="verso">Uma abertura de cortina para uma peça eterna.</p>
+      <p class="verso"></p>
+      <p class="verso">Que Deus abençoe cada passo nosso,</p>
+      <p class="verso">Cada saudade que nos aproxima,</p>
+      <p class="verso">Cada reencontro que é sempre uma reafirmação.</p>
+      <p class="verso"></p>
+      <p class="verso">Que a paixão nunca se apague — que queime cada dia mais,</p>
+      <p class="verso">Que a alegria seja nossa rotina sagrada,</p>
+      <p class="verso">Que o carinho seja a língua que falamos para sempre.</p>
+      <p class="verso"></p>
+      <p class="verso assinatura-poesia">Você é minha saudade boa,<br>Meu amor sem limite,<br>Minha alegria diária e meu para sempre.</p>
+      <p class="verso assinatura-poesia" style="margin-top: 20px; font-style: italic; color: #ff1493; font-weight: bold;">Com todo meu amor, toda minha saudade,<br>todo meu carinho eterno,<br>— Filipe 💗</p>
+    </div>
   </div>
 
+  <div class="carrossel">
+    <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
+    <p class="legenda">"Cada imagem é um verso do poema que escrevemos juntos."</p>
+  </div>
 
   <script src="script.js"></script>
   <script>
-    // Garante que a aba 3 esteja ativa ao abrir a página
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof showTab === 'function') {
         showTab(2);
       }
     });
   </script>
-
 </body>
 </html>

@@ -39,6 +39,7 @@
   justify-content: center;
   margin-bottom: 20px;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .tab-btn {
   background: #ff69b4;
@@ -48,65 +49,80 @@
   padding: 10px 30px;
   font-size: 1.1em;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.tab-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
 }
 .tab-btn.active {
-  background: #ff1493;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
   font-weight: bold;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.4);
 }
 .tab-content { display: none; }
-.tab-content.active { display: block; }
+.tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 body {
-  background-color: #fff0f5;
-  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 50%, #fff0f5 100%);
+  font-family: 'Segoe UI', Trebuchet MS, sans-serif;
   text-align: center;
-  padding: 50px;
+  padding: 80px 20px 40px 20px;
   color: #ff1493;
-  overflow: auto;
+  overflow-x: hidden;
+  background-attachment: fixed;
 }
 .titulo-brilhante {
-  font-size: 2em;
+  font-size: 2.2em;
   color: #fff;
-  text-shadow: 0 0 8px #ffd700, 0 0 12px #ffdd99;
+  text-shadow: 0 0 8px #ffd700, 0 0 12px #ffdd99, 0 0 20px #ff69b4;
   animation: brilhar 2.5s ease-in-out infinite;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 @keyframes brilhar {
   0%, 100% {
     text-shadow: 0 0 8px #ffd700, 0 0 12px #ffdd99;
   }
   50% {
-    text-shadow: 0 0 16px #fffacd, 0 0 20px #ffe680;
+    text-shadow: 0 0 16px #fffacd, 0 0 20px #ffe680, 0 0 30px #ff69b4;
   }
 }
 .conteudo, .carrossel {
-  display: none;
-  animation: fadeIn 2s ease-in-out;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
 }
 .botao-revelar {
-  background-color: #ff69b4;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
   color: white;
-  padding: 15px 30px;
+  padding: 15px 40px;
   border: none;
   border-radius: 25px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
 }
 .botao-revelar:hover {
-  background-color: #ff1493;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.5);
 }
 .assinatura {
   font-style: italic;
   margin-top: 30px;
+  color: #ff1493;
+  font-weight: bold;
 }
 .legenda {
   font-style: italic;
   color: #c71585;
   margin-top: 10px;
+  font-size: 0.95em;
 }
 .coracao {
   position: fixed;
@@ -136,44 +152,68 @@ body {
     transform: translateY(100vh) rotate(540deg);
   }
 }
-@media (max-width: 600px) {
-  #abelhinha {
-    width: 30px;
-    height: 30px;
+@media (max-width: 768px) {
+  body {
+    padding: 70px 15px 30px 15px;
   }
-  .botao-revelar {
-    padding: 12px 24px;
-    font-size: 1.2em;
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
   }
   .conteudo {
-    padding: 20px;
+    padding: 15px;
   }
   img#slide {
     max-width: 95%;
   }
+  .titulo-brilhante {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 480px) {
+  .tabs {
+    gap: 5px;
+  }
+  .tab-btn {
+    padding: 6px 10px;
+    font-size: 0.8em;
+    border-radius: 15px 15px 0 0;
+  }
+  .titulo-brilhante {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+  }
+  body {
+    padding: 65px 10px 20px 10px;
+  }
 }
 img#slide {
-  width: 320px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
-  max-width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-top: 20px;
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease;
+}
+img#slide:hover {
+  transform: scale(1.05);
 }
 body.revelado {
   background: linear-gradient(120deg, #fff0f5, #ffe4e1, #fddde6);
   transition: background 2s ease-in-out;
   animation: solBrilhando 6s ease-in-out infinite;
-  box-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+  box-shadow: inset 0 0 60px rgba(255, 215, 0, 0.1);
 }
 @keyframes solBrilhando {
   0% {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.05);
   }
   50% {
-    box-shadow: 0 0 60px rgba(255, 223, 0, 0.5);
+    box-shadow: inset 0 0 60px rgba(255, 223, 0, 0.15);
   }
   100% {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.05);
   }
 }
 .estrela {
@@ -194,16 +234,18 @@ body.revelado {
 .frase {
   position: fixed;
   font-size: 1em;
-  color: black;
+  color: #ff1493;
   opacity: 0;
   animation: flutuarFrase 6s ease-in-out forwards;
   pointer-events: none;
   z-index: 2;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(255, 105, 180, 0.3);
 }
 @keyframes flutuarFrase {
   0% { opacity: 0; transform: translateY(0); }
   20% { opacity: 1; }
-  80% { opacity: 1; transform: translateY(-30px); }
+  80% { opacity: 1; transform: translateY(-40px); }
   100% { opacity: 0; }
 }
 .coracao, .petala {
@@ -223,6 +265,7 @@ body.revelado {
   animation: subir 10s linear infinite;
   pointer-events: none;
   z-index: 1;
+  border: 2px solid rgba(255, 105, 180, 0.5);
 }
 @keyframes subir {
   to {
@@ -236,8 +279,18 @@ body.revelado {
   left: -50px;
   font-size: 1.8em;
   z-index: 999;
+  animation: andaFormiguinha 15s linear infinite;
 }
 @keyframes andaFormiguinha {
   0% { left: -50px; }
   100% { left: 100vw; }
 }
+/* Efeito especial de pulso */
+.pulso {
+  animation: pulsarIntensidade 1.5s ease-in-out infinite;
+}
+@keyframes pulsarIntensidade {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
