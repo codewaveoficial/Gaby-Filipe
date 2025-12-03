@@ -1,39 +1,24 @@
-/* Pétalas de rosa flutuantes */
-.petala-flutuante {
-  position: fixed;
-  top: -40px;
-  font-size: 28px;
-  opacity: 0.85;
-  pointer-events: none;
-  z-index: 9998;
-  animation: cairPetala 5s linear forwards;
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes cairPetala {
-  to {
-    transform: translateY(110vh) rotate(360deg) scale(1.2);
-    opacity: 0;
-  }
-}
-/* Corações flutuantes */
-.coracao-flutuante {
-  position: fixed;
-  bottom: -40px;
-  left: 50vw;
-  font-size: 32px;
-  opacity: 0.85;
-  pointer-events: none;
-  z-index: 9999;
-  animation: subirCoracao 4s linear forwards;
-  transition: left 0.5s;
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f6f8fc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes subirCoracao {
-  to {
-    transform: translateY(-110vh) scale(1.2) rotate(-15deg);
-    opacity: 0;
-  }
-}
+/* ============================================
+   BARRA DE ABAS
+   ============================================ */
 .tabs {
   display: flex;
   justify-content: center;
@@ -41,6 +26,7 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .tab-btn {
   background: #ff69b4;
   color: #fff;
@@ -56,6 +42,7 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
 }
+
 .tab-btn.active {
   background: linear-gradient(135deg, #ff69b4, #ff1493);
   font-weight: bold;
@@ -124,25 +111,13 @@ body {
   margin-top: 10px;
   font-size: 0.95em;
 }
-.coracao {
-  position: fixed;
-  top: -50px;
-  font-size: 2em;
-  animation: cair 7s linear infinite;
-  color: #ff69b4;
-}
-@keyframes cair {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-  }
-}
-.flor {
-  position: fixed;
-  top: -30px;
-  font-size: 1.5em;
-  animation: cairFlor 8s linear infinite;
-  pointer-events: none;
-  z-index: 1;
+
+.linha-poema {
+    font-size: 18px;
+    opacity: 0;
+    animation: linhaPoema 0.7s ease forwards;
+    animation-delay: calc(var(--i) * 0.5s);
+    margin-bottom: 10px;
 }
 .flor.vermelha { color: #ff4d4d; }
 .flor.azul { color: #4da6ff; }
