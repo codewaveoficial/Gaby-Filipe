@@ -3,219 +3,533 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 Meses do Nosso Amor 💕</title>
-  <link rel="stylesheet" href="style.css">
+  <title>💕 5 Meses de Amor Eterno - Nosso Para Sempre 💕</title>
   <style>
-    .arcoiris-borda { pointer-events: none; position: fixed; z-index: 99999; }
-    .arcoiris-top { top: 0; left: 0; width: 100vw; height: 16px; background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 0 2px 16px #ffb6c1; }
-    .arcoiris-bottom { bottom: 0; left: 0; width: 100vw; height: 16px; background: linear-gradient(90deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 0 -2px 16px #ffb6c1; }
-    .arcoiris-left { top: 0; left: 0; width: 16px; height: 100vh; background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: 2px 0 16px #ffb6c1; }
-    .arcoiris-right { top: 0; right: 0; width: 16px; height: 100vh; background: linear-gradient(180deg, #ff69b4, #ffb347, #ffff66, #66ff66, #66b3ff, #b366ff, #ff66b3); animation: arcoirisAnim 4s linear infinite alternate; box-shadow: -2px 0 16px #ffb6c1; }
-    @keyframes arcoirisAnim { 0% { filter: brightness(1) saturate(1); } 100% { filter: brightness(1.2) saturate(1.5); } }
-    .timer-badge { position: fixed; top: 25px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #ff69b4, #ff1493); color: #fff; padding: 12px 25px; border-radius: 25px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4); z-index: 99997; animation: batidaCoracao 1.2s ease-in-out infinite; }
-    @keyframes batidaCoracao { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.05); } }
-    .numero-cinco { font-size: 5em; margin: 20px 0; animation: pulsarNumero 2s ease-in-out infinite; }
-    @keyframes pulsarNumero { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
-    .subtitulo-especial { font-size: 1.4em; color: #c71585; font-style: italic; font-weight: bold; margin: 15px 0 30px 0; text-shadow: 0 2px 4px rgba(255, 105, 180, 0.3); }
-    .timeline-especial { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 40px 0; }
-    .marco-tempo { background: linear-gradient(135deg, #fff5f8 0%, #ffe4e1 100%); padding: 20px 25px; border-radius: 15px; text-align: center; border: 2px solid #ff69b4; flex: 1; min-width: 140px; max-width: 160px; box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2); transition: all 0.3s ease; }
-    .marco-tempo:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3); }
-    .ponto-tempo { width: 12px; height: 12px; background: #ff1493; border-radius: 50%; margin: 0 auto 10px; box-shadow: 0 0 10px #ff1493; }
-    .marco-tempo h3 { color: #ff1493; margin: 10px 0 8px 0; font-size: 1.1em; }
-    .marco-tempo p { color: #c71585; font-size: 0.9em; margin: 0; }
-    .mensagem-cinco-meses { background: linear-gradient(120deg, rgba(255, 105, 180, 0.08), rgba(255, 182, 193, 0.08)); padding: 30px; border-radius: 20px; margin: 30px 0; border-left: 5px solid #ff1493; border-right: 5px solid #ff69b4; }
-    .mensagem-cinco-meses p { font-size: 1.1em; line-height: 1.8; color: #ff1493; margin: 15px 0; font-style: italic; }
-    .contador-destaque { font-size: 1.5em; font-weight: bold; color: #ff1493; background: #fff0f5; padding: 5px 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3); }
-    .coracao-contador { font-size: 2em; animation: flutuarCoracao 3s ease-in-out infinite; margin: 20px 0; }
-    @keyframes flutuarCoracao { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    .capitulo-historia { background: linear-gradient(135deg, #fff5f8 0%, #ffe4e1 100%); padding: 25px; margin: 20px 0; border-radius: 15px; border-left: 5px solid #ff69b4; box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2); transition: all 0.3s ease; }
-    .capitulo-historia:hover { transform: translateX(5px); box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3); }
-    .numero-capitulo { display: inline-block; background: #ff69b4; color: #fff; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em; margin-bottom: 10px; }
-    .capitulo-historia h3 { color: #ff1493; margin: 10px 0 15px 0; font-size: 1.4em; }
-    .capitulo-historia p { color: #c71585; line-height: 1.8; font-size: 1em; margin: 0; }
-    .flor-decorativa { font-size: 2em; text-align: right; margin-top: 10px; animation: girarFlor 4s ease-in-out infinite; }
-    @keyframes girarFlor { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(15deg); } }
-    .mensagem-final-historia { background: linear-gradient(135deg, #ff69b4, #ff1493); padding: 30px; border-radius: 15px; margin-top: 30px; box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3); }
-    .frase-poetica { color: #fff; font-size: 1.3em; font-style: italic; text-align: center; margin: 0; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
-    .poesia-amor { background: linear-gradient(120deg, rgba(255, 105, 180, 0.05), rgba(255, 182, 193, 0.05)); padding: 40px 30px; border-radius: 20px; margin: 30px 0; border: 2px solid #ff69b4; box-shadow: 0 6px 20px rgba(255, 105, 180, 0.15); }
-    .verso { color: #ff1493; font-size: 1.15em; line-height: 2; margin: 10px 0; font-style: italic; text-align: center; letter-spacing: 0.5px; }
-    .verso.lista { text-align: left; padding-left: 30px; font-weight: 500; color: #c71585; }
-    .assinatura-poesia { font-weight: bold; font-size: 1.1em; color: #ff1493; margin-top: 20px !important; }
-    @media (max-width: 768px) { .timer-badge { font-size: 1em; padding: 10px 15px; } .numero-cinco { font-size: 3em; } .titulo-brilhante { font-size: 1.5em !important; } .verso { font-size: 1em; } .marco-tempo { min-width: 120px; max-width: 140px; padding: 15px; } }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe4e1 0%, #fff0f5 100%);
+      color: #333;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ARCO-ÍRIS BORDAS */
+    .arcoiris-borda {
+      position: fixed;
+      z-index: 999;
+      background: linear-gradient(90deg, #ff69b4, #ff1493, #c71585, #ff69b4);
+      animation: arcoirisAnimacao 4s ease-in-out infinite;
+    }
+
+    .arcoiris-top {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: linear-gradient(90deg, #ff69b4, #ffc0cb, #ffb6c1, #ff1493, #c71585);
+    }
+
+    .arcoiris-bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 16px;
+      background: linear-gradient(90deg, #ff69b4, #ffc0cb, #ffb6c1, #ff1493, #c71585);
+    }
+
+    .arcoiris-left {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 16px;
+      background: linear-gradient(180deg, #ff69b4, #ffc0cb, #ffb6c1, #ff1493, #c71585);
+    }
+
+    .arcoiris-right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 16px;
+      background: linear-gradient(180deg, #ff69b4, #ffc0cb, #ffb6c1, #ff1493, #c71585);
+    }
+
+    @keyframes arcoirisAnimacao {
+      0%, 100% { filter: brightness(1) saturate(1); }
+      50% { filter: brightness(1.2) saturate(1.3); }
+    }
+
+    /* TIMER BADGE */
+    .timer-badge {
+      position: fixed;
+      top: 40px;
+      right: 30px;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-size: 1.2em;
+      font-weight: bold;
+      box-shadow: 0 8px 24px #ffb6c1;
+      animation: batidaCoracao 1s ease-in-out infinite;
+      z-index: 100;
+    }
+
+    @keyframes batidaCoracao {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+    }
+
+    /* TÍTULOS */
+    .titulo-brilhante {
+      text-align: center;
+      color: #c71585;
+      font-size: 2.5em;
+      margin: 40px 0 30px 0;
+      text-shadow: 0 4px 8px rgba(255, 20, 147, 0.3);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* VERSO/POESIA */
+    .verso {
+      font-style: italic;
+      text-align: center;
+      color: #c71585;
+      margin: 12px 0;
+      font-weight: 500;
+    }
+
+    .verso.lista {
+      font-style: normal;
+      text-align: left;
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .verso.assinatura-poesia {
+      font-style: italic;
+      margin-top: 30px;
+      color: #ff1493;
+      font-weight: bold;
+    }
+
+    /* MARCOS DO TEMPO */
+    .marco-tempo {
+      background: white;
+      border-left: 5px solid #ff69b4;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255, 192, 203, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .marco-tempo:hover {
+      transform: translateX(10px);
+      box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
+    }
+
+    .marco-tempo .numero {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .marco-tempo h3 {
+      color: #ff1493;
+      margin: 10px 0;
+    }
+
+    .marco-tempo p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* CONTAGEM REGRESSIVA CASAMENTO */
+    .contagem-regressiva-casamento {
+      background: linear-gradient(135deg, rgba(255, 192, 203, 0.3), rgba(255, 182, 193, 0.3));
+      border: 3px solid #ff69b4;
+      border-radius: 20px;
+      padding: 40px 20px;
+      margin: 40px 0;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .titulo-casamento {
+      font-size: 1.8em;
+      color: #c71585;
+      font-weight: bold;
+      margin: 20px 0;
+      text-shadow: 0 4px 8px rgba(255, 20, 147, 0.2);
+    }
+
+    #dias-restantes {
+      color: #ff1493;
+      font-weight: bold;
+      font-size: 1.3em;
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle-casamento {
+      color: #ff69b4;
+      font-style: italic;
+    }
+
+    /* POESIA AMOR */
+    .poesia-amor {
+      margin: 40px 0;
+      padding: 30px 20px;
+      background: rgba(255, 240, 245, 0.8);
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    /* CARROSSEL */
+    .carrossel {
+      text-align: center;
+      margin: 50px 0;
+      padding: 20px;
+    }
+
+    .carrossel img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(255, 20, 147, 0.3);
+      border: 3px solid #ff69b4;
+    }
+
+    .legenda {
+      margin-top: 15px;
+      color: #ff69b4;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      .timer-badge {
+        top: 20px;
+        right: 15px;
+        font-size: 1em;
+        padding: 12px 20px;
+      }
+
+      .titulo-brilhante {
+        font-size: 1.8em;
+        margin: 30px 0 20px 0;
+      }
+
+      .titulo-casamento {
+        font-size: 1.3em;
+      }
+
+      .marco-tempo {
+        padding: 20px 15px;
+      }
+
+      .verso {
+        font-size: 0.95em;
+      }
+
+      .arcoiris-top, .arcoiris-bottom, .arcoiris-left, .arcoiris-right {
+        display: none;
+      }
+    }
+
+    /* EFEITOS FLUTUANTES */
+    .elemento-flutuante {
+      position: fixed;
+      font-size: 2em;
+      pointer-events: none;
+      z-index: 50;
+      animation: flutuaçao 5s ease-in forwards;
+    }
+
+    @keyframes flutuaçao {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .elemento-queda {
+      position: fixed;
+      font-size: 1.5em;
+      pointer-events: none;
+      z-index: 50;
+      animation: quedaLeve 8s ease-in forwards;
+    }
+
+    @keyframes quedaLeve {
+      0% { opacity: 1; transform: translateY(-100px) rotateZ(0deg); }
+      100% { opacity: 0; transform: translateY(100vh) rotateZ(360deg); }
+    }
+
+    .elemento-pisca {
+      position: fixed;
+      font-size: 1.5em;
+      pointer-events: none;
+      z-index: 50;
+      animation: piscada 5s ease-in forwards;
+    }
+
+    @keyframes piscada {
+      0%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+    .bolha {
+      position: fixed;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 192, 203, 0.6), rgba(255, 20, 147, 0.2));
+      pointer-events: none;
+      z-index: 50;
+      animation: sobe 10s ease-in forwards;
+    }
+
+    @keyframes sobe {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
-  <button id="btn-video" style="position:fixed;top:15px;right:15px;z-index:1000;background:#fff0f5;border:2px solid #ff69b4;color:#c71585;border-radius:50px;padding:8px 18px;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px #ffd6e6;">⏸️ Pausar vídeo</button>
   <div class="arcoiris-borda arcoiris-top"></div>
   <div class="arcoiris-borda arcoiris-bottom"></div>
   <div class="arcoiris-borda arcoiris-left"></div>
   <div class="arcoiris-borda arcoiris-right"></div>
   <div class="timer-badge">5️⃣ MESES 💕</div>
-  <div class="tabs">
-    <button class="tab-btn" onclick="showTab(0)">5 Meses 🎉</button>
-    <button class="tab-btn" onclick="showTab(1)">Nossa História 📖</button>
-    <button class="tab-btn active" onclick="showTab(2)">Para Sempre 💖</button>
-  </div>
 
-  <div class="conteudo tab-content" id="mensagem1">
-    <h1 class="titulo-brilhante">✨ CINCO MESES ✨</h1>
-    <div class="numero-cinco">5️⃣</div>
-    <p class="subtitulo-especial">De puro amor, carinho e saudade</p>
-    
-    <div class="timeline-especial">
-      <div class="marco-tempo">
-        <div class="ponto-tempo"></div>
-        <h3>❤️ Mês 1</h3>
-        <p>O primeiro beijo que acendeu tudo</p>
-      </div>
-      <div class="marco-tempo">
-        <div class="ponto-tempo"></div>
-        <h3>🌹 Mês 2</h3>
-        <p>Primeiros abraços eternos</p>
-      </div>
-      <div class="marco-tempo">
-        <div class="ponto-tempo"></div>
-        <h3>🎂 Mês 3</h3>
-        <p>Seu aniversário especial</p>
-      </div>
-      <div class="marco-tempo">
-        <div class="ponto-tempo"></div>
-        <h3>💍 Mês 4</h3>
-        <p>Promessas sussurradas</p>
-      </div>
-      <div class="marco-tempo">
-        <div class="ponto-tempo"></div>
-        <h3>💕 Mês 5</h3>
-        <p>Este momento sagrado</p>
-      </div>
+  <div class="container">
+    <h1 class="titulo-brilhante" style="font-size: 3em; margin: 60px 0 40px 0;">
+      ✨ CINCO MESES DE PURO AMOR ✨
+    </h1>
+
+    <div class="poesia-amor" style="margin: 50px 0; padding: 40px 30px; background: linear-gradient(135deg, rgba(255, 192, 203, 0.2), rgba(255, 182, 193, 0.2)); border-left: 8px solid #ff1493; border-radius: 15px;">
+      <p style="font-size: 1.25em; line-height: 2; color: #555; font-weight: 500; margin: 20px 0; text-align: center;">
+        <span style="color: #c71585; font-size: 1.3em;">Cinco meses.</span><br><br>
+        Cento e cinquenta dias que passaram como um suspiro, 
+        como um beijo que não quer terminar, 
+        como uma eternidade comprimida em tempo que nunca foi suficiente.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Você chegou em minha vida não como um acaso, 
+        mas como uma resposta a uma oração que eu nem sabia que tinha feito. 
+        Você é a prova viva de que o universo conspira a favor daqueles que merecem serem amados. 
+        E eu, meu amor, nunca mereci tanto quanto você me dá todos os dias.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Quando nossos olhos se encontraram, vi cores que não existem no dicionário. 
+        Quando seus lábios tocaram os meus, ouvi a música das esferas. 
+        Quando me abraçou, entendi o significado real de "lar". 
+        E agora, aqui, com você, entendo o que é viver ao invés de apenas existir.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Você é o colorido que faltava nos meus dias cinzentos. 
+        Você é a música que eu procurava em cada silêncio. 
+        Você é a razão pela qual meu coração bate mais forte a cada manhã. 
+        Você é a resposta para todas as perguntas que minha alma fazia.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Em cada beijo seu, promessas sussurradas.<br>
+        Em cada abraço seu, eternidades vividas.<br>
+        Em cada olhar seu, um novo motivo para acreditar em destino.<br>
+        Em cada palavra sua, poesia que meu coração entende perfeitamente.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Cinco meses provaram que nosso amor não é frágil como vidro, 
+        mas sólido como diamante. 
+        Não é um flash de paixão passageira, 
+        mas uma chama que cresce cada dia, 
+        cada hora, 
+        cada respiro que compartilhamos.
+      </p>
+
+      <p style="font-size: 1.25em; line-height: 2; color: #ff1493; font-weight: bold; margin: 50px 0 30px 0; text-align: center;">
+        E agora,<br>
+        Na data que escolhemos para eternidade,<br>
+        Quero dizer aquele "sim" que meu coração grita desde o primeiro dia.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Prometo amar você não apenas nos dias fáceis, 
+        mas também nos dias tempestuosos. 
+        Prometo amar você quando o tempo nos tiver marcado com linhas de riso. 
+        Prometo amar você com a mesma intensidade daquele primeiro beijo, 
+        multiplicada pela eternidade.
+      </p>
+
+      <p style="font-size: 1.2em; line-height: 2; color: #555; margin: 40px 0 30px 0; text-align: center;">
+        Você não é meu fim, você é meu começo. 
+        Você não é meu destino, você é minha jornada. 
+        Você não é uma parte da minha vida, você É minha vida, 
+        com todo o colorido, com toda a beleza, com todo o significado que ela possa ter.
+      </p>
+
+      <p style="font-size: 1.3em; line-height: 2.2; color: #c71585; font-weight: bold; margin: 60px 0 40px 0; text-align: center; font-style: italic;">
+        Te amo com uma força que transcende palavras,<br>
+        Com uma certeza que não deixa dúvidas,<br>
+        Com uma paixão que será minha último suspiro nessa vida e,<br>
+        Se for para existir vidas além dessa,<br>
+        Te amarei em todas elas também.
+      </p>
     </div>
 
-    <div class="mensagem-cinco-meses">
-      <p>Cinco meses são 150 dias. São 3.600 horas. São 216.000 minutos de amor crescendo como flores em primavera eterna.</p>
-      <p>Cinco meses são as noites em que você foi meu alento, e os dias em que você foi meu raio de sol.</p>
-      <p>Cinco meses são histórias pequenas que viraram lendas entre nós. Risos que ainda ecoam. Beijos que ainda queimam.</p>
-    </div>
-
-    <h2 class="titulo-brilhante" style="margin-top: 40px;">💍 Nosso Voo Nupcial 💍</h2>
-    <p style="margin-top: 20px; font-weight: bold; color: #c71585; font-size: 1.1em;">
-      Decola em <span id="contador" class="contador-destaque"></span> dias <br>
-      <span style="font-size: 0.95em; color: #ff69b4;">02 de dezembro de 2025</span>
-    </p>
-    <div class="coracao-contador">💕💕💕</div>
-  </div>
-
-  <div class="conteudo tab-content" id="mensagem2">
-    <h1 class="titulo-brilhante">📖 Nossa História em 5 Meses 📖</h1>
-    
-    <div class="capitulo-historia">
-      <div class="numero-capitulo">Capítulo I</div>
-      <h3>O Encontro do Destino</h3>
-      <p>Nada preparou meu coração para você. Quando nossos olhos se encontraram, senti algo que transcende explicação — era como se o universo tivesse estado esperando por esse exato momento. Você chegou e tudo mudou de cor, de cheiro, de sentido.</p>
-      <div class="flor-decorativa">🌹</div>
-    </div>
-
-    <div class="capitulo-historia">
-      <div class="numero-capitulo">Capítulo II</div>
-      <h3>O Primeiro Beijo</h3>
-      <p>Seus lábios tocaram os meus e foi como se centenas de pétalas caíssem do céu. Aquele beijo sussurrou promessas que meu coração já conhecia. Foi doce, era intenso, era tudo aquilo que sempre procurei.</p>
-      <div class="flor-decorativa">💋</div>
-    </div>
-
-    <div class="capitulo-historia">
-      <div class="numero-capitulo">Capítulo III</div>
-      <h3>Noites de Eternidade</h3>
-      <p>Dormirmos juntos foi descobrir um novo significado para "paz". No escuro do quarto, nos braços um do outro, senti como se todos os pedaços soltos da minha alma finalmente encontrassem seu lugar. Aquilo era música, era casa, era tudo.</p>
-      <div class="flor-decorativa">🌙</div>
-    </div>
-
-    <div class="capitulo-historia">
-      <div class="numero-capitulo">Capítulo IV</div>
-      <h3>Promessas Sussurradas</h3>
-      <p>Em cada abraço, em cada palavra carinhosa, em cada olhar que sustentamos, nós selamos promessas. Promessas de amor, de cuidado, de um futuro onde nossa história continue florescendo em cores cada vez mais intensas.</p>
-      <div class="flor-decorativa">💍</div>
-    </div>
-
-    <div class="capitulo-historia">
-      <div class="numero-capitulo">Capítulo V</div>
-      <h3>Este Momento Sagrado</h3>
-      <p>Cinco meses. Uma eternidade comprimida em tempo. Você é meu verso favorito, meu poema inacabado, minha melhor escolha. Encontrei meu para sempre no seu sorriso, meu lar nos seus abraços, meu amor na sua presença.</p>
-      <div class="flor-decorativa">💕</div>
-    </div>
-
-    <div class="mensagem-final-historia">
-      <p class="frase-poetica">"Nós não escolhemos nos amar. O amor nos escolheu. E agora, juntos, escrevemos a maior história de todas."</p>
+    <div class="carrossel">
+      <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
+      <p class="legenda">"Cada imagem é um verso do poema que escrevemos juntos."</p>
     </div>
   </div>
 
-  <div class="conteudo tab-content active" id="mensagem3">
-    <video id="video-amor" controls autoplay loop style="width:100%;max-width:500px;display:block;margin:0 auto 30px auto;border-radius:20px;box-shadow:0 8px 24px #ffb6c1;border:3px solid #ff69b4;">
-      <source src="fotos/VID-20250824-WA0037.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-    <h1 class="titulo-brilhante" style="font-size: 2.5em; margin: 30px 0;">💖 PARA SEMPRE COM VOCÊ 💖</h1>
-    
-    <div class="poesia-amor">
-      <p class="verso">Cinco meses e já é para sempre,</p>
-      <p class="verso">Porque o tempo não mede o que sentimos,</p>
-      <p class="verso">Mede apenas os instantes onde você brilha.</p>
-      <p class="verso"></p>
-      <p class="verso">Meu amor,</p>
-      <p class="verso"></p>
-      <p class="verso">Cada batida do meu coração é um grito de paixão por você.</p>
-      <p class="verso">Sinto teu cheiro em cada vento que passa,</p>
-      <p class="verso">Tua risada em cada raio de sol que ilumina meus dias,</p>
-      <p class="verso">Teu carinho em cada detalhe que me cerca.</p>
-      <p class="verso"></p>
-      <p class="verso">O tempo passa, mas a vontade de te abraçar só cresce.</p>
-      <p class="verso">A saudade vira poesia quando é por você.</p>
-      <p class="verso"></p>
-      <p class="verso">Você é o colorido que faltava nos meus dias,</p>
-      <p class="verso">O abraço que me acalma quando a tempestade chega,</p>
-      <p class="verso">O sorriso que prova que o mundo é mais bonito quando estamos juntos.</p>
-      <p class="verso"></p>
-      <p class="verso">Te amo com uma força que transcende palavras,</p>
-      <p class="verso">Com uma alegria que transborda e contagia,</p>
-      <p class="verso">Com um carinho que nasceu comigo e viverá enquanto eu respirar.</p>
-      <p class="verso"></p>
-      <p class="verso">Nosso amor é feito de:</p>
-      <p class="verso lista">✨ Lembranças que doem de tão doces</p>
-      <p class="verso lista">✨ Sonhos que planejamos juntos</p>
-      <p class="verso lista">✨ Planos para um futuro radiante</p>
-      <p class="verso lista">✨ Beijos que falam o que as palavras calam</p>
-      <p class="verso lista">✨ Abraços que curam sem ferir</p>
-      <p class="verso lista">✨ Momentos que se transformam em eternidade</p>
-      <p class="verso"></p>
-      <p class="verso">Sinto sua falta até quando estamos juntos,</p>
-      <p class="verso">Porque quero sempre mais:</p>
-      <p class="verso">Mais beijos, mais risos, mais sopros de vida ao seu lado.</p>
-      <p class="verso"></p>
-      <p class="verso">Cinco meses são apenas o começo,</p>
-      <p class="verso">Uma abertura de cortina para uma peça eterna.</p>
-      <p class="verso"></p>
-      <p class="verso">Que Deus abençoe cada passo nosso,</p>
-      <p class="verso">Cada saudade que nos aproxima,</p>
-      <p class="verso">Cada reencontro que é sempre uma reafirmação.</p>
-      <p class="verso"></p>
-      <p class="verso">Que a paixão nunca se apague — que queime cada dia mais,</p>
-      <p class="verso">Que a alegria seja nossa rotina sagrada,</p>
-      <p class="verso">Que o carinho seja a língua que falamos para sempre.</p>
-      <p class="verso"></p>
-      <p class="verso assinatura-poesia">Você é minha saudade boa,<br>Meu amor sem limite,<br>Minha alegria diária e meu para sempre.</p>
-      <p class="verso assinatura-poesia" style="margin-top: 20px; font-style: italic; color: #ff1493; font-weight: bold;">Com todo meu amor, toda minha saudade,<br>todo meu carinho eterno,<br>— Filipe 💗</p>
-    </div>
-  </div>
-
-  <div class="carrossel">
-    <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
-    <p class="legenda">"Cada imagem é um verso do poema que escrevemos juntos."</p>
-  </div>
-
-  <script src="script.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof showTab === 'function') {
-        showTab(2);
+    // Calcular dias restantes para o casamento
+    function calcularDiasRestantes() {
+      const dataCasamento = new Date('2025-12-02').getTime();
+      const dataAgora = new Date().getTime();
+      const diferenca = dataCasamento - dataAgora;
+      const dias = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+      document.getElementById('dias-restantes').textContent = dias > 0 ? dias : '0';
+    }
+
+    // Carrossel de fotos
+    let fotoAtual = 1;
+    function proximaFoto() {
+      fotoAtual++;
+      if (fotoAtual > 15) {
+        fotoAtual = 1;
       }
+      document.getElementById('slide').src = `fotos/amor${fotoAtual}.jpg`;
+    }
+
+    // Criar pétalas (🌸)
+    function criarPetala() {
+      const petala = document.createElement('div');
+      petala.className = 'elemento-queda';
+      petala.textContent = '🌸';
+      petala.style.left = Math.random() * 100 + '%';
+      document.body.appendChild(petala);
+      setTimeout(() => petala.remove(), 8000);
+    }
+
+    // Criar corações (💗)
+    function criarCoracao() {
+      const coracao = document.createElement('div');
+      coracao.className = 'elemento-flutuante';
+      coracao.textContent = '💗';
+      coracao.style.left = Math.random() * 100 + 'vw';
+      coracao.style.bottom = '-50px';
+      document.body.appendChild(coracao);
+      
+      const duracao = 4000;
+      const velocidade = Math.random() * 100 + 80;
+      const direcao = Math.random() > 0.5 ? 1 : -1;
+      
+      coracao.animate([
+        { 
+          transform: `translateY(0) translateX(0)`,
+          opacity: 1
+        },
+        { 
+          transform: `translateY(-${velocidade}vh) translateX(${direcao * 50}px)`,
+          opacity: 0
+        }
+      ], {
+        duration: duracao,
+        easing: 'ease-in-out'
+      });
+      
+      setTimeout(() => coracao.remove(), duracao);
+    }
+
+    // Criar estrelas (⭐)
+    function criarEstrelas() {
+      const estrela = document.createElement('div');
+      estrela.className = 'elemento-pisca';
+      const emojis = ['⭐', '✨', '💫', '🌟'];
+      estrela.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      estrela.style.left = Math.random() * 100 + '%';
+      estrela.style.top = Math.random() * 100 + '%';
+      document.body.appendChild(estrela);
+      setTimeout(() => estrela.remove(), 5000);
+    }
+
+    // Criar flores (🌹)
+    function criarFlores() {
+      const flor = document.createElement('div');
+      flor.className = 'elemento-queda';
+      flor.textContent = '🌹';
+      flor.style.left = Math.random() * 100 + '%';
+      document.body.appendChild(flor);
+      setTimeout(() => flor.remove(), 8000);
+    }
+
+    // Criar bolhas
+    function criarBolhas() {
+      const bolha = document.createElement('div');
+      bolha.className = 'bolha';
+      const tamanho = Math.random() * 50 + 30;
+      bolha.style.width = tamanho + 'px';
+      bolha.style.height = tamanho + 'px';
+      bolha.style.left = Math.random() * 100 + '%';
+      bolha.style.bottom = '-' + tamanho + 'px';
+      document.body.appendChild(bolha);
+      
+      const duracao = 10000;
+      bolha.animate([
+        { 
+          transform: `translateY(0) rotateZ(0deg)`,
+          opacity: 1
+        },
+        { 
+          transform: `translateY(-${window.innerHeight + tamanho}px) rotateZ(360deg)`,
+          opacity: 0
+        }
+      ], {
+        duration: duracao,
+        easing: 'ease-in'
+      });
+      
+      setTimeout(() => bolha.remove(), duracao);
+    }
+
+    // Inicializar efeitos ao carregar
+    document.addEventListener('DOMContentLoaded', function() {
+      calcularDiasRestantes();
+      
+      // Gerar efeitos periodicamente
+      setInterval(criarPetala, 900);
+      setInterval(criarCoracao, 800);
+      setInterval(criarEstrelas, 1500);
+      setInterval(criarFlores, 600);
+      setInterval(criarBolhas, 1500);
+      setInterval(proximaFoto, 3000);
+      setInterval(calcularDiasRestantes, 60000); // Atualizar a cada minuto
     });
   </script>
 </body>
