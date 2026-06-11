@@ -312,6 +312,114 @@
       0% { opacity: 1; }
       100% { opacity: 0; }
     }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 0 auto 25px;
+      max-width: 900px;
+    }
+
+    .tab-btn {
+      background: rgba(255, 20, 147, 0.95);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 28px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 8px 24px rgba(255, 20, 147, 0.22);
+    }
+
+    .tab-btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #ff85c0, #ff1493);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #ff1493, #ff69b4);
+      box-shadow: 0 10px 30px rgba(255, 20, 147, 0.35);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .especial-dia {
+      background: rgba(255, 240, 245, 0.95);
+      border: 2px solid rgba(255, 20, 147, 0.18);
+      border-radius: 24px;
+      padding: 34px 30px;
+      margin-top: 20px;
+      box-shadow: 0 12px 32px rgba(255, 105, 180, 0.14);
+      text-align: left;
+    }
+
+    .especial-dia h2 {
+      color: #ff1493;
+      font-size: 2.2em;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .especial-dia p {
+      color: #4a214d;
+      font-size: 1.1em;
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .especial-dia .promessas {
+      list-style: none;
+      padding-left: 0;
+      margin: 22px 0 0 0;
+    }
+
+    .especial-dia .promessas li {
+      position: relative;
+      margin-bottom: 16px;
+      padding-left: 34px;
+      font-weight: 600;
+      color: #5a1c52;
+    }
+
+    .especial-dia .promessas li:before {
+      content: '💖';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .especial-dia .cartao {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 18px 26px;
+      background: linear-gradient(145deg, rgba(255, 182, 193, 0.16), rgba(255, 255, 255, 0.9));
+      border-radius: 30px;
+      box-shadow: inset 0 0 12px rgba(255, 105, 180, 0.08);
+      color: #c71585;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    .glow-heart {
+      display: inline-block;
+      animation: pulseHeart 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.92; }
+    }
   </style>
 </head>
 <body>
@@ -321,10 +429,16 @@
   <div class="arcoiris-borda arcoiris-right"></div>
   <div class="timer-badge">5️⃣ MESES 💕</div>
 
+  <div class="tabs">
+    <button type="button" class="tab-btn" data-tab="1">Nossa História</button>
+    <button type="button" class="tab-btn active" data-tab="2">Dia dos Namorados</button>
+  </div>
+
   <div class="container">
-    <h1 class="titulo-brilhante" style="font-size: 3em; margin: 60px 0 40px 0;">
-      ✨ CINCO MESES DE PURO AMOR ✨
-    </h1>
+    <div class="tab-content" id="tab-1">
+      <h1 class="titulo-brilhante" style="font-size: 3em; margin: 60px 0 40px 0;">
+        ✨ CINCO MESES DE PURO AMOR ✨
+      </h1>
 
     <div class="poesia-amor" style="margin: 50px 0; padding: 40px 30px; background: linear-gradient(135deg, rgba(255, 192, 203, 0.2), rgba(255, 182, 193, 0.2)); border-left: 8px solid #ff1493; border-radius: 15px;">
       <p style="font-size: 1.25em; line-height: 2; color: #555; font-weight: 500; margin: 20px 0; text-align: center;">
@@ -404,6 +518,25 @@
     <div class="carrossel">
       <img id="slide" src="fotos/amor1.jpg" alt="Foto de nós dois">
       <p class="legenda">"Cada imagem é um verso do poema que escrevemos juntos."</p>
+    </div>
+    </div>
+
+    <div class="tab-content active" id="tab-2">
+      <div class="especial-dia">
+        <h2>Gabi, meu carinho mais precioso</h2>
+        <p>Este dia é seu, é nosso. Quero que cada palavra aqui seja um abraço que cruza o tempo e chega bem perto do seu coração.</p>
+        <p>Quando penso em você, sinto o perfume das flores mais belas, o calor do sol nas manhãs mais doces e a paz de saber que encontrei o meu lar.</p>
+        <ul class="promessas">
+          <li>Prometo ser o seu porto seguro nos dias mais calmos e nos mais intensos.</li>
+          <li>Prometo que cada Dia dos Namorados será maior do que o anterior.</li>
+          <li>Prometo guardar nossos sorrisos como pequenas estrelas no céu do nosso amor.</li>
+          <li>Prometo celebrar você hoje e em todas as horas que virão.</li>
+        </ul>
+        <p>Você é a poesia que deixou minha vida mais bonita, o riso que colore meus dias e o amor que ilumina minha alma.</p>
+        <div class="cartao">
+          Feliz Dia dos Namorados, minha Gabi. Você é o meu para sempre. <span class="glow-heart">💗</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -530,6 +663,23 @@
       setInterval(criarBolhas, 1500);
       setInterval(proximaFoto, 3000);
       setInterval(calcularDiasRestantes, 60000); // Atualizar a cada minuto
+
+      function showTab(tabId) {
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.tab === tabId);
+        });
+        document.querySelectorAll('.tab-content').forEach(tab => {
+          tab.classList.toggle('active', tab.id === 'tab-' + tabId);
+        });
+      }
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', event => {
+          event.preventDefault();
+          showTab(btn.dataset.tab);
+        });
+      });
+      showTab('2');
     });
   </script>
 </body>
